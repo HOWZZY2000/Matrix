@@ -3,12 +3,12 @@
 #include <vector>
 using namespace std;
 
-void print(vector<double> C, int m) {
-    for (int i = 0; i < C.size(); i++) {
+void print(vector<double> matrix, int m) {
+    for (int i = 0; i < matrix.size(); i++) {
         if ((i + 1) % m == 0) {
-            cout << C[i] << endl;;
+            cout << matrix[i] << endl;;
         } else {
-            cout << C[i] << " ";
+            cout << matrix[i] << " ";
         }
     }
 }
@@ -42,7 +42,7 @@ void matrix_mutiply(double *A, double *B, int m, int n, int p) { // A is a m x n
 }
 
 int main() {
-    double x[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // matrix A
-    double p[12] = {1, 2, 3, 4, 7, 6, 5, 4, 8, 9, 10, 11}; // matrix B
-    matrix_mutiply(x, p, 3, 3, 4); // x is 3 x 3 matrix, p is 3 x 4 matrix
+    double A[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9}; // matrix A
+    double B[12] = {1, 2, 3, 4, 7, 6, 5, 4, 8, 9, 10, 11}; // matrix B
+    matrix_mutiply(A, B, 3, 3, 4); // x is 3 x 3 matrix, p is 3 x 4 matrix
 }
